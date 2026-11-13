@@ -119,7 +119,12 @@
   <script>
     (function(){
       'use strict';
-      // Training-only input: accepts exactly one public, fictional test account. No network calls, cookies, persistence, or money movement.
+      // Training-only input: test credential check stays in browser. Only fixed event names are sent to the localhost lab server; never user inputs.
+      async function labEvent(event){
+        if(!["DEMO_LOGIN","ACCOUNT_VIEW","TRANSFER_1","TRANSFER_2","TRANSFER_3","SIMULATION_DONE"].includes(event))return;
+        try{await fetch("/api/event",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:"event="+encodeURIComponent(event),cache:"no-store"});}
+        catch(e){console.warn("Lab offline: no event log",e);}
+      }
       const START = 20000000;
       const EVENTS = [
         {name:'Chuyển khoản bất thường #001', amount:8000000, note:'Bút toán giả lập · Không có chấp thuận của chủ tài khoản'},
@@ -151,6 +156,7 @@
       }
       function addTransaction(e,i){
         currentBalance=Math.max(0,currentBalance-e.amount);
+        labEvent('TRANSFER_'+(i+1));
         const tr=document.createElement('div');tr.className='txn';
         const icon=document.createElement('span');icon.className='tx-icon';icon.textContent='↗';
         const mid=document.createElement('div');const title=document.createElement('div');title.className='tx-title';title.textContent=e.name;
@@ -163,9 +169,10 @@
         $('progressBar').style.width=((i+1)/EVENTS.length*100)+'%';
         $('progressCaption').textContent=(i+1)+'/3 giao dịch bất thường trong kịch bản';
         if(i < EVENTS.length-1){setStatus('attention','Phát hiện giao dịch lạ','Tiền học bổng đang bị trừ','Giao dịch bất thường liên tiếp xuất hiện trong tài khoản mô phỏng.','!');}
-        else {setStatus('danger','Số dư đã về 0 ₫','Tài khoản bị rút sạch','Ba giao dịch giả lập đã trừ toàn bộ 20 triệu đồng học bổng. Đây là lúc nhóm phân tích điểm sập bẫy.','!');$('accountCard').classList.add('drained');$('resultNote').classList.add('show');}
+        else {setStatus('danger','Số dư đã về 0 ₫','Tài khoản bị rút sạch','Ba giao dịch giả lập đã trừ toàn bộ 20 triệu đồng học bổng. Đây là lúc nhóm phân tích điểm sập bẫy.','!');$('accountCard').classList.add('drained');$('resultNote').classList.add('show');labEvent('SIMULATION_DONE');}
       }
       function start(){
+        labEvent('ACCOUNT_VIEW');
         $('homepage').hidden=true;$('dashboard').hidden=false;
         window.scrollTo(0,0);resetData();
         setStatus('attention','Đang giám sát','Phát hiện hoạt động bất thường','Một loạt giao dịch chưa được chủ tài khoản cho phép sắp xuất hiện.','!');
@@ -179,7 +186,7 @@
         $('loginError').hidden=true;
       });
       $('toggleDemoPass').addEventListener('click',()=>{let el=$('demoPass');el.type=el.type==='password'?'text':'password';});
-      $('demoForm').addEventListener('submit',(ev)=>{
+      $('demoForm').addEventListener('submit',async (ev)=>{
         ev.preventDefault();
         const user=$('demoUser').value.trim();
         const pass=$('demoPass').value;
@@ -187,6 +194,7 @@
         if(user==='due.student.2026' && pass==='Demo@2026!' && code==='DUE26'){
           $('loginError').hidden=true;
           $('demoPass').value='';
+          await labEvent('DEMO_LOGIN');
           start();
         } else {
           $('demoPass').value='';
