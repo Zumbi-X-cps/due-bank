@@ -47,16 +47,31 @@
     @keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
     @media(max-width:1050px){.dash-nav{display:none}.dash-inner{padding:32px 22px 60px}.cards-layout,.below-grid{grid-template-columns:1fr}.account-card,.status-card{min-height:280px}.status-card{min-height:230px}}
     @media(max-width:550px){.dash-top{height:70px;padding:0 17px}.dash-brand{font-size:18px}.dash-stamp{font-size:9px;padding:7px 9px}.avatar{width:32px;height:32px}.dash-greet{align-items:flex-start;flex-direction:column}.dash-inner{padding:25px 15px 40px}.dash-greet h1{font-size:31px}.account-card{border-radius:20px;padding:26px 23px;min-height:265px}.acc-money{font-size:43px}.acc-money small{font-size:18px}.status-card,.activity,.details{padding:22px}.txn{grid-template-columns:38px 1fr auto;gap:8px}.tx-icon{width:35px;height:35px}.tx-title{font-size:11.5px}.tx-meta{font-size:9px}.tx-amount{font-size:12px}.dash-actions{gap:6px}}
+
+    .input-look:focus-within{border-color:#356af2;box-shadow:0 0 0 3px #2452f21c;background:#fff}
+    .input-look input{font:inherit;min-width:0;flex:1;display:block;height:48px;border:0;outline:none;background:transparent;color:#173566;font-size:14px}
+    .input-look input::placeholder{color:#9aaac2}
+    .eye-btn{border:0;background:transparent;color:#5d76a4;padding:8px;font-size:18px}
+    .captcha-entry{flex:1;min-width:0;height:48px;padding:0 13px;border-radius:9px;border:1px solid #d3e0f5;color:#153976;font:inherit;background:#fafcff}
+    .captcha-entry:focus{outline:3px solid #2452f21c;border-color:#356af2}
+    .demo-credentials{font-size:12px;line-height:1.9;padding:13px 16px;border-radius:12px;background:#f0f6ff;color:#204581;border:1px solid #d4e4ff;margin-bottom:12px}
+    .demo-credentials code{font-size:12px;font-weight:700;color:#173ab2}
+    .demo-credentials small{color:#b4471a;font-weight:700}
+    .practice-line{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:3px 0 17px;padding:0 1px;flex-wrap:wrap}
+    .practice-line span{font-size:10px;font-weight:700;letter-spacing:.035em;color:#7689ab}
+    .practice-line button{font-size:11px;font-weight:750;color:#2454d4;background:#edf4ff;border:1px solid #d4e2ff;padding:8px 11px;border-radius:8px;cursor:pointer}
+    .practice-line button:hover,.practice-line button:focus-visible{background:#dfebff;outline:2px solid #aac5ff}
+    .login-error{margin:4px 0 15px;color:#b91c1c;font-weight:650;font-size:12px;background:#fff0f0;padding:9px 12px;border-radius:8px}
   </style>
 </head>
 <body>
   <div class="layout" id="homepage">
     <aside class="visual" aria-label="Giới thiệu DUE Bank">
       <div class="brandtop"><div class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 23L13 8l5 9 8-9" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 25h7" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div>DUE BANK <span style="font-size:9px;opacity:.7;margin-left:2px;letter-spacing:.16em">DIGITAL</span></div>
-      <div class="hero-copy"><div class="eyebrow">DIỄN TẬP AN TOÀN THÔNG TIN</div><h1>Chạm tương lai.<br><em>Mở mọi kết nối.</em></h1><p>Không gian ngân hàng số hiện đại, thiết kế để khám phá trải nghiệm tài chính trong kỷ nguyên số.</p></div>
+      <div class="hero-copy"><div class="eyebrow">DIỄN TẬP AN TOÀN THÔNG TIN</div><h1>Đồng hành tri thức.<br><em>Vững bước tương lai.</em></h1><p>Đồng hành cùng sinh viên, quản lý tài chính và theo dõi các khoản hỗ trợ học tập.</p></div>
       <div class="scenery" aria-hidden="true">
         <div class="halo"></div><div class="spark one">✦</div><div class="spark two">✧</div>
-        <div class="wallet-app"><div class="app-top"><span>Xin chào, DUE 👋</span><span class="app-dot"></span></div><div class="balance-label">Số dư minh họa</div><div class="balance">24.680.000 <small>₫</small></div><div class="mini-chart"><svg viewBox="0 0 220 70" fill="none" preserveAspectRatio="none"><path d="M0 59Q23 56 37 39T80 47T123 20T166 27T220 5V70H0Z" fill="#95baff66"/><path d="M0 59Q23 56 37 39T80 47T123 20T166 27T220 5" stroke="#356bea" stroke-width="4" stroke-linecap="round"/></svg></div><div class="app-bottom"><i></i><i></i><i></i></div></div>
+        <div class="wallet-app"><div class="app-top"><span>Xin chào, DUE 👋</span><span class="app-dot"></span></div><div class="balance-label">Số dư minh họa</div><div class="balance">20.000.000 <small>₫</small></div><div class="mini-chart"><svg viewBox="0 0 220 70" fill="none" preserveAspectRatio="none"><path d="M0 59Q23 56 37 39T80 47T123 20T166 27T220 5V70H0Z" fill="#95baff66"/><path d="M0 59Q23 56 37 39T80 47T123 20T166 27T220 5" stroke="#356bea" stroke-width="4" stroke-linecap="round"/></svg></div><div class="app-bottom"><i></i><i></i><i></i></div></div>
         <div class="bank-card"><div class="card-brand"><svg viewBox="0 0 32 32" fill="none"><path d="M5 23L13 8l5 9 8-9M20 25h7" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg> DUE BANK</div><div class="chip"></div><div class="card-number">••••  ••••  ••••  2026</div><div class="card-bottom"><span>DUE DIGITAL</span><span>VIRTUAL</span></div></div>
         <div class="floating-alert"><span class="alert-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Quản lý an toàn</strong><small>Hệ thống bảo mật số</small></span></div>
       </div>
@@ -67,13 +82,15 @@
       <section class="form-wrap" aria-labelledby="login-heading">
         <div class="brand-big"><span class="mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 23L13 8l5 9 8-9M20 25h7" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>DUE BANK</div>
         <div class="eyeline"></div>
-        <div class="hello">Chào mừng bạn quay trở lại</div><h2 id="login-heading">DUE Internet Banking</h2><p class="subtitle">Trải nghiệm bảo mật tài khoản trong môi trường ngân hàng số.</p>
-        <div class="secure-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Phiên truy cập thực hành</strong><small>Dữ liệu minh họa có sẵn · Không yêu cầu tài khoản ngân hàng thật</small></div></div>
-        <div class="input-group"><label>Tên đăng nhập <span style="font-size:10px;color:#7195ce;font-weight:650">Đã điền sẵn</span></label><div class="input-look" role="text" aria-label="Tên đăng nhập mẫu due.student.2026"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-5 16-5 16 0"/></svg><span>due.student.2026</span><span class="sample">Mẫu</span></div></div>
-        <div class="input-group"><label>Mật khẩu</label><div class="input-look" role="text" aria-label="Mật khẩu minh họa không hiển thị"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span class="dots">••••••••••</span><span class="sample">Giả lập</span></div></div>
-        <div class="captcha-line"><div class="captcha-code" aria-hidden="true">DUE26</div><small>Mã kiểm tra phiên mẫu<br>Đã thiết lập cho bài thực hành</small></div>
-        <button class="btn-main" id="loginBtn" type="button"><span>Đăng nhập</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <p class="small-print">Diễn tập có sự đồng ý của người tham gia. Không nhập hoặc sử dụng thông tin ngân hàng thật.</p>
+        <div class="hello">Thông báo dành cho sinh viên</div><h2 id="login-heading">DUE Internet Banking</h2><p class="subtitle">Xác nhận tài khoản thử nghiệm để xem thông tin học bổng trong tình huống diễn tập.</p>
+        <div class="practice-line"><span>DIỄN TẬP BẢO MẬT · KHÔNG SỬ DỤNG TÀI KHOẢN THẬT</span><button type="button" id="fillDemo">Điền dữ liệu mẫu</button></div>
+        <form id="demoForm" autocomplete="off" novalidate>
+        <div class="input-group"><label for="demoUser">Tên đăng nhập</label><div class="input-look"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-5 16-5 16 0"/></svg><input id="demoUser" type="text" name="demo_user" placeholder="Nhập tên đăng nhập thử nghiệm" aria-label="Tên đăng nhập thử nghiệm" spellcheck="false" autocapitalize="off" autocomplete="off" required></div></div>
+        <div class="input-group"><label for="demoPass">Mật khẩu thử nghiệm</label><div class="input-look"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="demoPass" type="password" name="demo_pass" placeholder="Chỉ nhập Demo@2026!" autocomplete="new-password" required><button type="button" class="eye-btn" id="toggleDemoPass" aria-label="Hiện hoặc ẩn mật khẩu thử nghiệm">◉</button></div></div>
+        <div class="captcha-line"><div class="captcha-code" aria-label="Mã kiểm tra DUE26">DUE26</div><input class="captcha-entry" id="demoCaptcha" name="demo_captcha" type="text" placeholder="Nhập mã kiểm tra" autocomplete="off" autocapitalize="characters" maxlength="5" required></div>
+        <p id="loginError" class="login-error" role="alert" hidden></p>
+        <button class="btn-main" id="loginBtn" type="submit"><span>Đăng nhập</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form><p class="small-print">Diễn tập có sự đồng ý của người tham gia. Không nhập hoặc sử dụng thông tin ngân hàng thật.</p>
       </section>
       <footer class="footer"><span>© 2026 <strong>DUE Bank</strong> · Dự án học thuật</span><span>Trải nghiệm giả lập <span class="dot"></span> Không liên kết với ngân hàng thật</span></footer>
     </main>
@@ -86,15 +103,15 @@
       <div class="dash-actions"><span class="dash-stamp">DỮ LIỆU GIẢ LẬP</span><span class="avatar" aria-label="Tài khoản mẫu">MA</span></div>
     </header>
     <main class="dash-inner">
-      <div class="dash-greet"><div><div class="overline">DUE INTERNET BANKING · PHIÊN DIỄN TẬP</div><h1>Chào buổi sáng, Minh An <span aria-hidden="true">✦</span></h1><p>Đây là tài khoản hư cấu dùng để minh họa tác động của email phishing.</p></div><button class="small-btn" type="button" id="resetBtn">↻ &nbsp; Mô phỏng lại</button></div>
+      <div class="dash-greet"><div><div class="overline">DUE INTERNET BANKING · PHIÊN DIỄN TẬP</div><h1>Chào buổi sáng, Minh An <span aria-hidden="true">✦</span></h1><p>Tài khoản giả lập có số dư 20 triệu đồng học bổng; diễn biến tiếp theo cho thấy rủi ro phishing.</p></div><button class="small-btn" type="button" id="resetBtn">↻ &nbsp; Mô phỏng lại</button></div>
       <div class="cards-layout">
-        <section class="account-card" id="accountCard" aria-label="Số dư tài khoản hư cấu"><div class="acc-head"><span>✦ &nbsp; DUE BANK · TÀI KHOẢN THANH TOÁN</span><span>VIRTUAL ACCOUNT</span></div><div class="acc-label">Số dư khả dụng</div><div class="acc-money" aria-live="polite"><span id="balanceValue">62.450.000</span><small>₫</small></div><div class="acc-bottom"><span>Chủ tài khoản: <b>LÊ MINH AN</b> (hư cấu)</span><span>Số tài khoản: <b>DUE-••••-2026</b></span></div></section>
+        <section class="account-card" id="accountCard" aria-label="Số dư tài khoản hư cấu"><div class="acc-head"><span>✦ &nbsp; DUE BANK · TÀI KHOẢN THANH TOÁN</span><span>VIRTUAL ACCOUNT</span></div><div class="acc-label">Số dư khả dụng (học bổng giả lập)</div><div class="acc-money" aria-live="polite"><span id="balanceValue">20.000.000</span><small>₫</small></div><div class="acc-bottom"><span>Chủ tài khoản: <b>LÊ MINH AN</b> (hư cấu)</span><span>Số tài khoản: <b>DUE-••••-2026</b></span></div></section>
         <section class="status-card" aria-label="Trạng thái tình huống"><div class="status-head"><h2>Tình trạng tài khoản</h2><span class="status-symbol" id="statusSymbol">◈</span></div><span class="status-tag" id="statusTag" role="status">Đã đăng nhập</span><div class="status-title" id="statusTitle">Tài khoản đã mở</div><p class="status-desc" id="statusDesc">Đang hiển thị thông tin mẫu của khách hàng. Tình huống giả lập sắp bắt đầu.</p><div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div><div class="progress-caption" id="progressCaption">0/3 giao dịch bất thường trong kịch bản</div></section>
       </div>
       <div class="below-grid">
         <section class="activity"><div class="section-top"><h2>Biến động số dư</h2><small id="activityCounter">Đang theo dõi tình huống</small></div><div class="txn-list" id="transactions" aria-live="polite"><div class="empty-txn"><span class="empty-icon">◇</span>Chưa có giao dịch nào trong tình huống này.</div></div></section>
-        <aside class="details"><div class="section-top"><h2>Thông tin tài khoản</h2><small>Hồ sơ mẫu</small></div><div class="detail-row"><span class="k">Tên khách hàng</span><span class="v">Lê Minh An</span></div><div class="detail-row"><span class="k">Số tài khoản</span><span class="v mask">DUE-••••-2026</span></div><div class="detail-row"><span class="k">Số điện thoại</span><span class="v mask">09•• ••• 216</span></div><div class="detail-row"><span class="k">Loại tài khoản</span><span class="v">Thanh toán</span></div><div class="detail-row"><span class="k">Bảo mật</span><span class="v">Tình huống giả lập</span></div><div class="result-note" id="resultNote" role="status"><strong>⚠ Số dư còn lại: 0 ₫</strong>Ba giao dịch chuyển tiền bất thường đã khiến toàn bộ số dư giả lập bị trừ. Đây là mô hình hậu quả, không có giao dịch ngân hàng thực tế.<div class="inline-actions"><button type="button" class="solid-action" id="explainBtn">Phân tích cơ chế phishing</button><button type="button" class="outline-action" id="backBtn">Quay lại đăng nhập</button></div></div></aside>
-        <section class="explain-row" id="explainRow"><strong>Điểm rủi ro trong kịch bản:</strong> Người dùng có thể nhầm trang xác minh trong email giả với website ngân hàng thật. Nếu họ cung cấp thông tin đăng nhập hoặc OTP thực tế, kẻ xấu có thể tìm cách chiếm quyền truy cập và chuyển tiền trái phép. <strong>Demo DUE Bank này không thu thập thông tin, không gửi OTP và không xử lý chuyển tiền thật.</strong> Hãy kiểm tra tên miền, tự mở ứng dụng ngân hàng chính thức và liên hệ tổng đài khi thấy đăng nhập bất thường.</section>
+        <aside class="details"><div class="section-top"><h2>Thông tin tài khoản</h2><small>Hồ sơ mẫu</small></div><div class="detail-row"><span class="k">Tên khách hàng</span><span class="v">Lê Minh An</span></div><div class="detail-row"><span class="k">Số tài khoản</span><span class="v mask">DUE-••••-2026</span></div><div class="detail-row"><span class="k">Số điện thoại</span><span class="v mask">09•• ••• 216</span></div><div class="detail-row"><span class="k">Loại tài khoản</span><span class="v">Thanh toán</span></div><div class="detail-row"><span class="k">Bảo mật</span><span class="v">Tình huống giả lập</span></div><div class="result-note" id="resultNote" role="status"><strong>⚠ Số dư còn lại: 0 ₫</strong>Ba giao dịch giả lập khiến 20 triệu đồng học bổng biến mất khỏi số dư. Không có giao dịch ngân hàng thực tế.<div class="inline-actions"><button type="button" class="solid-action" id="explainBtn">Phân tích cơ chế phishing</button><button type="button" class="outline-action" id="backBtn">Quay lại đăng nhập</button></div></div></aside>
+        <section class="explain-row" id="explainRow"><strong>Điểm rủi ro trong kịch bản:</strong> Lời hứa “nhận học bổng 20 triệu” đánh vào sự vui mừng và tạo áp lực xác minh. Nếu người dùng nhập thông tin đăng nhập hoặc OTP thật trên trang giả mạo, kẻ xấu có thể tìm cách chiếm quyền tài khoản. Việc chỉ mở link thông thường không tự động rút tiền. <strong>Demo DUE Bank này không thu thập thông tin, không gửi OTP và không xử lý chuyển tiền thật.</strong> Hãy kiểm tra tên miền, tự mở ứng dụng ngân hàng chính thức và liên hệ tổng đài khi thấy đăng nhập bất thường.</section>
       </div>
       <footer class="dash-foot">DUE Bank là ngân hàng hư cấu • Toàn bộ người dùng, số dư và giao dịch đều là dữ liệu dựng sẵn cho bài học An toàn thông tin.</footer>
     </main>
@@ -102,12 +119,12 @@
   <script>
     (function(){
       'use strict';
-      // Purely visual simulation: no editable credential fields, API calls, storage, OTPs or money movement.
-      const START = 62450000;
+      // Training-only input: accepts exactly one public, fictional test account. No network calls, cookies, persistence, or money movement.
+      const START = 20000000;
       const EVENTS = [
-        {name:'Chuyển khoản bất thường #001', amount:20000000, note:'Bút toán mô phỏng · Chưa được chủ tài khoản xác nhận'},
-        {name:'Chuyển khoản bất thường #002', amount:19500000, note:'Bút toán mô phỏng · Thiết bị lạ'},
-        {name:'Chuyển khoản bất thường #003', amount:22950000, note:'Bút toán mô phỏng · Số dư còn lại 0 ₫'}
+        {name:'Chuyển khoản bất thường #001', amount:8000000, note:'Bút toán giả lập · Không có chấp thuận của chủ tài khoản'},
+        {name:'Chuyển khoản bất thường #002', amount:7000000, note:'Bút toán giả lập · Thiết bị lạ'},
+        {name:'Chuyển khoản bất thường #003', amount:5000000, note:'Bút toán giả lập · Số dư còn lại 0 ₫'}
       ];
       const $=(id)=>document.getElementById(id);
       const money=n=>n.toLocaleString('vi-VN');
@@ -145,8 +162,8 @@
         $('activityCounter').textContent=(i+1)+' giao dịch phát sinh';
         $('progressBar').style.width=((i+1)/EVENTS.length*100)+'%';
         $('progressCaption').textContent=(i+1)+'/3 giao dịch bất thường trong kịch bản';
-        if(i < EVENTS.length-1){setStatus('attention','Phát hiện giao dịch lạ','Số dư đang giảm','Giao dịch bất thường liên tiếp xuất hiện trong tài khoản mô phỏng.','!');}
-        else {setStatus('danger','Số dư đã về 0 ₫','Tài khoản bị rút sạch','Ba giao dịch giả lập đã trừ toàn bộ số tiền ban đầu. Đây là lúc nhóm phân tích điểm sập bẫy.','!');$('accountCard').classList.add('drained');$('resultNote').classList.add('show');}
+        if(i < EVENTS.length-1){setStatus('attention','Phát hiện giao dịch lạ','Tiền học bổng đang bị trừ','Giao dịch bất thường liên tiếp xuất hiện trong tài khoản mô phỏng.','!');}
+        else {setStatus('danger','Số dư đã về 0 ₫','Tài khoản bị rút sạch','Ba giao dịch giả lập đã trừ toàn bộ 20 triệu đồng học bổng. Đây là lúc nhóm phân tích điểm sập bẫy.','!');$('accountCard').classList.add('drained');$('resultNote').classList.add('show');}
       }
       function start(){
         $('homepage').hidden=true;$('dashboard').hidden=false;
@@ -155,12 +172,32 @@
         EVENTS.forEach((item,i)=>{timers.push(setTimeout(()=>addTransaction(item,i),1700+i*1550));});
       }
       function goBack(){cancel();$('dashboard').hidden=true;$('homepage').hidden=false;window.scrollTo(0,0);$('loginBtn').focus();}
-      $('loginBtn').addEventListener('click',start);
+      $('fillDemo').addEventListener('click',()=>{
+        $('demoUser').value='due.student.2026';
+        $('demoPass').value='Demo@2026!';
+        $('demoCaptcha').value='DUE26';
+        $('loginError').hidden=true;
+      });
+      $('toggleDemoPass').addEventListener('click',()=>{let el=$('demoPass');el.type=el.type==='password'?'text':'password';});
+      $('demoForm').addEventListener('submit',(ev)=>{
+        ev.preventDefault();
+        const user=$('demoUser').value.trim();
+        const pass=$('demoPass').value;
+        const code=$('demoCaptcha').value.trim().toUpperCase();
+        if(user==='due.student.2026' && pass==='Demo@2026!' && code==='DUE26'){
+          $('loginError').hidden=true;
+          $('demoPass').value='';
+          start();
+        } else {
+          $('demoPass').value='';
+          $('loginError').textContent='Thông tin chưa đúng. Hãy dùng nút “Điền dữ liệu mẫu” để thử đăng nhập.';
+          $('loginError').hidden=false;
+        }
+      });
       $('resetBtn').addEventListener('click',start);
       $('backBtn').addEventListener('click',goBack);
       $('explainBtn').addEventListener('click',()=>{$('explainRow').classList.toggle('show');$('explainRow').scrollIntoView({behavior:'smooth',block:'nearest'});});
-      // When launched from the fictional training email, immediately run the visual-only scenario.
-      if(new URLSearchParams(location.search).get('scenario') === 'email') start();
+      // Links from training email now lead to the practice login form first.
     })();
   </script>
 </body>
